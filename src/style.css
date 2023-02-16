@@ -1,0 +1,124 @@
+/* general settings */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Karla', sans-serif;
+    color: #f0f0f0;
+}
+html, body, #root {
+    width: 100%;
+    height: 100%;
+    background-color: #2d2d2d;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    position: relative;
+}
+main {
+    max-width: 960px;
+    min-height: 100%;
+    padding: 45px 30px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* fixed images as background */
+[class^="blob-"] {
+    position: fixed;
+    z-index: 0;
+    opacity: .75;
+}
+.blob-1 {
+    right: 0;
+    top: 0;
+}
+.blob-2 {
+    left: 0;
+    bottom: 0;
+}
+
+/* containers */
+.start, .quiz {
+    position: relative;
+    z-index: 1;
+}
+.start {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+}
+.quiz {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+.question {
+    padding: .25rem 0 1.25rem;
+    border-bottom: 1px solid #DBDEF088;
+}
+.answers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .67em;
+}
+
+/* answer */
+.answer {
+    background-color: rgb(25,25,25,.5);
+    padding: .33rem .67rem;
+    font-size: .95em;
+    border: 1px solid #888;
+    border-radius: .25em;
+}
+.answer.selected {
+    background-color: #D6DBF5;
+    color: #293264;
+    border: 1px solid #D6DBF5;
+}
+.answer:is(.correct, .incorrect) {
+    color: #000;
+}
+.answer.correct {
+    background-color: rgba(0,255,0,.25);
+    border: 1px solid rgba(0,255,0,.5);
+}
+.answer.incorrect {
+    background-color: rgba(255,0,0,.25);
+    border: 1px solid rgba(255,0,0,.5);
+}
+
+/* utilities */
+.result {
+    text-align: center;
+    color: #fff;
+    margin: 1rem 0 0;
+}
+.text {
+    margin-bottom: .75rem;
+}
+button {
+    min-width: 150px;
+    height: 55px;
+    padding: 0 1rem;
+    background: #4D5B9E;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 15px;
+    text-transform: capitalize;
+    cursor: pointer;
+    margin: 1rem auto 0;
+}
