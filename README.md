@@ -1,4 +1,4 @@
-# Tenzies
+# Quizzical Trivia
 
 ## Languages used:
 
